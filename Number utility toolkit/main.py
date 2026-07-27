@@ -28,7 +28,72 @@ def palindrome():
       print("It is palindrome")
    else:
       print("It is not Palinrome")     
-                      
+def armstong():
+   n = int(input("Enter Number: "))
+   last =0
+   total=0
+   original = n
+   while(n!=0):
+      last = n% 10
+      total =total+last**3
+      n = n//10
+   if(total == original):
+      print("It is armstrong number")
+   else:
+      print("It is not armstong number")     
+def reverse():
+   n = int(input("Enter number: "))
+   last = 0
+   reverse =0
+   while(n!=0):
+      last = n%10
+      reverse = reverse*10+last
+      n = n//10
+   print(reverse)
+def count_digit():
+   n = int(input("Enter Inout: "))
+   count = 0
+   last = 0
+   while(n!=0):
+      last = n%10
+      count = count+1
+      n = n//10
+   print(count)
+def Sum_of_Digits():
+   n = int(input("Enter inout: "))
+   total = 0
+   last = 0
+   while(n!=0):
+      last =  n%10
+      total = total + last
+      n = n//10
+   print(total)
+def Largest_Digit():
+   n = int(input("Enter numbers: "))
+   largest = 0
+   while(n!=0):
+      last = n%10
+      if(last>largest):
+         largest = last;
+      n = n // 10
+   print(largest)
+def Smallest_Digit():
+   n = int(input("Enter numbers: "))
+   smallest = 9
+   while(n!=0):
+      last = n%10
+      if(last<smallest):
+         smallest = last;
+      n = n // 10
+   print(smallest)
+def even_odd():
+   n = int(input("Enter input: "))
+  
+
+   if(n%2==0):
+         print("Even nuber")
+   else:
+         print("Odd number")
 print("========== NUMBER UTILITY TOOLKIT ==========")
 print("1. Factorial")
 print("2. Prime Check")
@@ -49,9 +114,30 @@ else:
     if(choice == 1):
      result =factorial()
      print(result)
-    if(choice == 2):
+    elif(choice == 2):
      result = primecheck()
      print(result)
-    if(choice==3):
+    elif(choice==3):
        result = palindrome()
+       print(result)
+    elif(choice ==4):
+       result = armstong()
+       print(result)
+    elif(choice == 5):
+       result = reverse()
+       print(result)
+    elif(choice == 6):
+       result = count_digit()
+       print(result)
+    elif(choice == 7):
+       result = Sum_of_Digits()
+       print(result)
+    elif(choice == 8):
+       result = Largest_Digit()
+       print(result)
+    elif(choice == 9):
+       result = Smallest_Digit()
+       print(result)
+    elif(choice == 10):
+       result = even_odd()
        print(result)
