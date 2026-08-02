@@ -1,0 +1,5 @@
+Food,120
+Bus,50
+Coffee,80
+Books,500
+Recharge,299
